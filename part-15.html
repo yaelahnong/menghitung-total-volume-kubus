@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Function Javascript</title>
+</head>
+<body>
+    <h1>Javascript Function</h1>
+    <script>
+
+        var vol;
+        var total = [];
+        var totalAll;
+        var sisi;
+
+        // without func
+        // var jumlahK = prompt('Masukan Jumlah kubus yang akan dihitung');
+        // for (let i = 0; i < jumlahK; i++) {
+        //     sisi = prompt('masukan nilai kubus ke : ' + parseInt(i+1));
+        //     vol = sisi*sisi*sisi;
+        //     total.push(vol);
+        // }
+        // for (let i = 0; i < total.length; i++) {
+        //     console.log('volume kubus '+ parseInt(i+1) +' : ' + total[i]);
+        // }
+        // totalAll = total.reduce((a, b) => a + b, 0);
+        // console.log('Volume kubus total : ' + totalAll);
+        
+
+        // With function
+        var hitungK = function (Jml) {
+            for (let i = 0; i < Jml; i++) {
+                sisi = prompt('masukan nilai kubus ke : ' + parseInt(i+1));
+                vol = sisi*sisi*sisi;
+                total.push(vol);
+            }
+            for (let i = 0; i < total.length; i++) {
+                console.log('volume kubus '+ parseInt(i+1) +' : ' + total[i]);
+            }
+            totalAll = total.reduce((a, b) => a + b, 0);
+            console.log('Volume kubus total : ' + totalAll);
+        }
+        
+        var jumlahK = prompt('Masukan Jumlah kubus yang akan dihitung');
+        hitungK(jumlahK);
+    </script>
+</body>
+</html>
